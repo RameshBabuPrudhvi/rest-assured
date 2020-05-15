@@ -17,6 +17,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 
 public class BookSteps {
+
     private Response response;
     private ValidatableResponse json;
     private RequestSpecification request;
@@ -41,7 +42,7 @@ public class BookSteps {
     /**
      * asserts on json fields with single values
      */
-    @And("response includes the following$")
+    @And("response includes the following")
     public void response_equals(Map<String, String> responseFields) {
         for (Map.Entry<String, String> field : responseFields.entrySet()) {
             if (StringUtils.isNumeric(field.getValue())) {
